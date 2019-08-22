@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<!-- 启用延迟加载特性，不配置默认关闭该特性-->
+		<setting name="lazyLoadingEnabled" value="true"/>
+		<!-- 按需加载: false:使用关联属性，及时加载;    true,加载对象，则加载所有属性， -->
+		<setting name="aggressiveLazyLoading" value="false"/>
+		<setting name="lazyLoadTriggerMethods" value="clone"/>
+	</settings>
+
+	<!--
+	延迟加载：先从单表查询、需要时再从关联表去关联查询，大大提高数据库性能，因为查询单表要比关联查询多张表速度要快。
+
+	需求：如果查询订单并且关联查询用户信息。
+	如果先查询订单信息即可满足要求，当我们需要查询用户信息时再查询用户信息。把对用户信息的按需去查询就是延迟加载。
+     -->
+</configuration>

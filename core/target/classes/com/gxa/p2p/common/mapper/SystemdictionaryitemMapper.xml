@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper" >
+  <resultMap id="BaseResultMap" type="com.gxa.p2p.common.domain.Systemdictionaryitem" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="parentId" property="parentid" jdbcType="BIGINT" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="tvalue" property="tvalue" jdbcType="VARCHAR" />
+    <result column="sequence" property="sequence" jdbcType="TINYINT" />
+    <result column="intro" property="intro" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from `systemdictionaryitem`
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.gxa.p2p.common.domain.Systemdictionaryitem" useGeneratedKeys="true" keyProperty="id" >
+    insert into `systemdictionaryitem` (parentId, title, tvalue, 
+      sequence, intro)
+    values (#{parentid,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{tvalue,jdbcType=VARCHAR}, 
+      #{sequence,jdbcType=TINYINT}, #{intro,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.gxa.p2p.common.domain.Systemdictionaryitem" >
+    update `systemdictionaryitem`
+    set parentId = #{parentid,jdbcType=BIGINT},
+      title = #{title,jdbcType=VARCHAR},
+      tvalue = #{tvalue,jdbcType=VARCHAR},
+      sequence = #{sequence,jdbcType=TINYINT},
+      intro = #{intro,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, parentId, title, tvalue, sequence, intro
+    from `systemdictionaryitem`
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, parentId, title, tvalue, sequence, intro
+    from `systemdictionaryitem`
+  </select>
+
+  <select id="selectItemBysn" parameterType="String" resultMap="BaseResultMap">
+    select sdi.id,sdi.title
+    from systemdictionaryitem as sdi,systemdictionary as sd
+    WHERE sdi.parentId = sd.id and sd.sn=#{sn}
+  </select>
+
+
+</mapper>

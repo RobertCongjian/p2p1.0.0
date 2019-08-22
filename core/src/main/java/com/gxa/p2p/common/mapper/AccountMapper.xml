@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gxa.p2p.common.mapper.AccountMapper">
+    <resultMap id="accountResultMap" type="com.gxa.p2p.common.domain.Account">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="tradePassword" jdbcType="VARCHAR" property="tradePassword"/>
+        <result column="usableAmount" jdbcType="DECIMAL" property="usableAmount"/>
+        <result column="freezedAmount" jdbcType="DECIMAL" property="freezedAmount"/>
+        <result column="borrowLimit" jdbcType="DECIMAL" property="borrowLimit"/>
+        <result column="version" jdbcType="INTEGER" property="version"/>
+        <result column="unReceiveInterest" jdbcType="DECIMAL" property="unReceiveInterest"/>
+        <result column="unReceivePrincipal" jdbcType="DECIMAL" property="unReceivePrincipal"/>
+        <result column="unReturnAmount" jdbcType="DECIMAL" property="unReturnAmount"/>
+        <result column="remainBorrowLimit" jdbcType="DECIMAL" property="remainBorrowLimit"/>
+    </resultMap>
+    <insert id="insertAccount" parameterType="Account">
+        insert into account (id, tradePassword, usableAmount, freezedAmount, borrowLimit, version, unReceiveInterest,
+                             unReceivePrincipal, unReturnAmount, remainBorrowLimit)
+        values (#{id}, #{tradePassword}, #{usableAmount}, #{freezedAmount}, #{borrowLimit}, #{version},
+                #{unReceiveInterest},
+                #{unReceivePrincipal}, #{unReturnAmount}, #{remainBorrowLimit});
+
+
+    </insert>
+    <select id="getAccountById" resultMap="accountResultMap" parameterType="long">
+        select id, tradePassword, usableAmount, freezedAmount, borrowLimit, version, unReceiveInterest, unReceivePrincipal, unReturnAmount, remainBorrowLimit
+        from account where id=#{id}
+    </select>
+
+</mapper>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gxa.p2p.common.mapper.LoginInfoMapper">
+    <resultMap id="BaseResultMap" type="com.gxa.p2p.common.domain.LoginInfo">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="state" property="state" jdbcType="TINYINT"/>
+        <result column="usertype" property="usertype" jdbcType="TINYINT"/>
+        <result column="admin" property="admin" jdbcType="BIT"/>
+    </resultMap>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete
+        from `logininfo`
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+    <insert id="insert" parameterType="com.gxa.p2p.common.domain.LoginInfo" useGeneratedKeys="true" keyProperty="id">
+        insert into `logininfo` (username,
+                                 password,
+                                 state,
+                                 usertype,
+                                 admin)
+        values (#{username,jdbcType=VARCHAR},
+                #{password,jdbcType=VARCHAR},
+                #{state,jdbcType=TINYINT},
+                #{usertype,jdbcType=TINYINT},
+                #{admin,jdbcType=BIT})
+    </insert>
+
+    <update id="updateByPrimaryKey" parameterType="com.gxa.p2p.common.domain.LoginInfo">
+        update `logininfo`
+        set username = #{username,jdbcType=VARCHAR},
+            password = #{password,jdbcType=VARCHAR},
+            state    = #{state,jdbcType=TINYINT},
+            usertype = #{usertype,jdbcType=TINYINT},
+            admin    = #{admin,jdbcType=BIT}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select id, username, password, state, usertype, admin
+        from `logininfo`
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <select id="selectAll" resultMap="BaseResultMap">
+        select id, username, password, state, usertype, admin
+        from `logininfo`
+    </select>
+    <select id="selectCountByUsername" parameterType="java.lang.String" resultType="int">
+        select count(*)
+        from `logininfo`
+        where username = #{username,jdbcType=VARCHAR}
+    </select>
+    <select id="login" resultMap="BaseResultMap">
+        select id, username, password, state, usertype, admin
+        from logininfo
+        where username = #{username}
+          and password = #{password}
+          and usertype = #{usertype}
+    </select>
+
+</mapper>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+
+<!-- 配置生成器 -->
+<generatorConfiguration>
+
+    <context id="mysql" defaultModelType="hierarchical" targetRuntime="MyBatis3Simple">
+
+        <!-- 自动识别数据库关键字，默认false，如果设置为true，根据SqlReservedWords中定义的关键字列表；
+             一般保留默认值，遇到数据库关键字（Java关键字），使用columnOverride覆盖 -->
+        <property name="autoDelimitKeywords" value="false"/>
+        <!-- 生成的Java文件的编码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <!-- beginningDelimiter和endingDelimiter：指明数据库的用于标记数据库对象名的符号，比如ORACLE就是双引号，MYSQL默认是`反引号； -->
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!--创建Java类时是否取消生成注释-->
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!-- 必须要有的，使用这个配置链接数据库 -->
+        <jdbcConnection
+                driverClass="com.mysql.cj.jdbc.Driver"
+                connectionURL="jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;useUnicode=true&amp;useSSL=false&amp;serverTimezone=UTC"
+                userId="root"
+                password="970603"
+        />
+
+        <!-- Model模型生成器,用来生成含有主键key的类，记录类 以及查询Example类
+        targetPackage     指定生成的model生成所在的包名
+        targetProject     指定在该项目下所在的路径
+        如果目录不存在，MBG不会自动建目录 -->
+        <javaModelGenerator targetPackage="com.gxa.p2p.common.domain"
+                            targetProject="src/main/java">
+            <!-- 是否允许子包，即targetPackage.schemaName.tableName -->
+            <property name="enableSubPackages" value="true"/>
+            <!-- 是否对model添加构造函数,构造方法包含了所有的field；而不是使用setter； -->
+            <property name="constructorBased" value="true"/>
+            <!-- 是否对类CHAR类型的列的数据进行trim操作 -->
+            <property name="trimStrings" value="true"/>
+            <!-- 建立的Model对象是否不可改变,即生成的Model对象不会有setter方法，只有构造方法 -->
+            <property name="immutable" value="false"/>
+        </javaModelGenerator>
+
+        <!-- 生成SQL map的XML文件生成器， 注意，在Mybatis3之后，我们可以使用mapper.xml文件+Mapper接口 -->
+        <sqlMapGenerator targetPackage="com.gxa.p2p.common.mapper"
+                         targetProject="src/main/java">
+            <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!-- 对于mybatis来说，即生成Mapper接口，注意，如果没有配置该元素，那么默认不会生成Mapper接口
+            type：选择怎么生成mapper接口（在MyBatis3/MyBatis3Simple下）：
+
+        type="ANNOTATEDMAPPER",生成Java Model和基于注解的Mapper对象
+        type="MIXEDMAPPER",生成基于注解的Java Model和相应的Mapper对象
+        type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口
+        注意，如果context是MyBatis3Simple：只支持ANNOTATEDMAPPER和XMLMAPPER -->
+        <javaClientGenerator targetPackage="com.gxa.p2p.common.mapper"
+                             targetProject="src/main/java"
+                             type="XMLMAPPER">
+            <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
+            <property name="enableSubPackages" value="true"/>
+
+            <!-- 可以为所有生成的接口添加一个父接口，但是MBG只负责生成，不负责检查 <property name="rootInterface"
+                value=""/> -->
+        </javaClientGenerator>
+
+
+        <!--多个表写多个table-->
+        <table tableName="userinfo" delimitIdentifiers="true">
+            <!-- 参考 javaModelGenerator 的 constructorBased属性 -->
+            <property name="constructorBased" value="false"/>
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+
+
+
+
+
+    </context>
+
+</generatorConfiguration>

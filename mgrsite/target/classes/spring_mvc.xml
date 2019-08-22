@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <import resource="classpath:applicationContext.xml"/>
+
+    <!--1.开启Springioc 自动扫描注解包  只对mvc的包做扫描  -->
+    <context:component-scan base-package="com.gxa.cdut.controller"/>
+
+    <!--2. 开启注解，对jackson数据支持 -->
+    <mvc:annotation-driven/>
+    <mvc:default-servlet-handler/>
+
+    <!--3.配置视图解析器  -->
+    <!-- 配置视图解析器:如何把handle方法返回值解析为实际的物理视图
+         name="prefix"代表前面的目录，为空代表根目录  name="suffix"代表返回的地址为后缀为.JSP的文件 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <!--    添加json返回编码UTF-8-->
+    <bean id="utf8Charset" class="java.nio.charset.Charset"
+          factory-method="forName">
+        <constructor-arg value="UTF-8"/>
+    </bean>
+
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <constructor-arg ref="utf8Charset"/>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+</beans>
