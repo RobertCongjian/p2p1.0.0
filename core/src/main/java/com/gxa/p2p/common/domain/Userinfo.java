@@ -1,5 +1,7 @@
 package com.gxa.p2p.common.domain;
 
+import com.gxa.p2p.common.util.BitStatesUtils;
+
 import java.util.List;
 
 public class Userinfo {
@@ -15,17 +17,17 @@ public class Userinfo {
 
     private String phonenumber;
 
-    private Long incomegradeId;
+    private Long incomegradeId=1L;
 
-    private Long marriageId;
+    private Long marriageId=5L;
 
-    private Long kidcountId;
+    private Long kidcountId=7L;
 
-    private Long educationbackgroundId;
+    private Long educationbackgroundId=3L;
 
     private Integer authscore;
 
-    private Long houseconditionId;
+    private Long houseconditionId=9L;
 
     private Long realauthid;
 
@@ -221,4 +223,21 @@ public class Userinfo {
                 ", systemdictionaryitems=" + systemdictionaryitems +
                 '}';
     }
+
+
+    // 添加绑定的状态码
+    public void addState(Long state) {
+        bitstate = BitStatesUtils.addState(bitstate, state);
+    }
+
+    // 移除状态码
+    public void  removeState(Long state) {
+        bitstate = BitStatesUtils.removeState(bitstate, state);
+    }
+
+    // 判断用户是否已经填写了基本资料
+    public boolean getIsBasicInfo() {
+        return BitStatesUtils.hasState(bitstate, BitStatesUtils.OP_USER_INFO);
+    }
+
 }
