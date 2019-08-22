@@ -6,6 +6,7 @@ import com.gxa.p2p.common.domain.Userinfo;
 import com.gxa.p2p.common.mapper.SystemdictionaryitemMapper;
 import com.gxa.p2p.common.mapper.UserinfoMapper;
 import com.gxa.p2p.common.service.IUserInfoService;
+import com.gxa.p2p.common.util.BitStatesUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,14 +43,20 @@ public class UserServiceImpl implements IUserInfoService {
 
     @Override
     public Userinfo getUserInfoById(Long id) {
-        return userinfoMapper.getUserInfoAndSystemdictionaryById(id);
+        return userinfoMapper.selectByPrimaryKey(id);
     }
 
     @Override
     public void updateItem(Userinfo userinfo,Long id) {
 
+
+        // 设置状态码
+        if ( !userinfo.getIsBasicInfo()) {
+            userinfo.addState(BitStatesUtils.OP_USER_INFO);
+        }
+
         int row = userinfoMapper.updateItem(userinfo,id);
-        System.out.println(row);
+
         if(row!=1){
             throw new RuntimeException("更新失败！");
         }
