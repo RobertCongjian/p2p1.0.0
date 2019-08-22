@@ -95,16 +95,12 @@ public class UserInfoController {
     @RequestMapping("userInfo2")
     public String toUserInfo2(Model model){
 
-
         model.addAttribute("userinfo", iUserInfoService.getUserInfoById(UserContext.getLoginInfo().getId()));
         model.addAttribute("incomeGrades", iUserInfoService.selectItemBysn("incomeGrade"));
         model.addAttribute("educationBackgrounds",iUserInfoService.selectItemBysn("educationBackground") );
         model.addAttribute("marriages",iUserInfoService.selectItemBysn("marriage") );
         model.addAttribute("kidCounts",iUserInfoService.selectItemBysn("kidCount") );
         model.addAttribute("houseConditions",iUserInfoService.selectItemBysn("houseCondition") );
-
-
-
 
         return "userInfo";
 
