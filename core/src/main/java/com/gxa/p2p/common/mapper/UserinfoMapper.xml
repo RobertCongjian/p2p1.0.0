@@ -16,11 +16,25 @@
         <result column="houseCondition_id" property="houseconditionId" jdbcType="BIGINT"/>
         <result column="realauthid" property="realauthid" jdbcType="BIGINT"/>
         <result column="email" property="email" jdbcType="VARCHAR"/>
+        <association property="educationbackgroundItem" javaType="Systemdictionaryitem"
+                     column="educationbackground_id" select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+        <association property="kidcountItem" javaType="Systemdictionaryitem"
+                     column="kidcount_id" select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+        <association property="marriageItem" javaType="Systemdictionaryitem"
+                     column="marriage_id" select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+        <association property="houseconditionItem" javaType="Systemdictionaryitem"
+                     column="housecondition_id" select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+        <association property="incomegradeItem" javaType="Systemdictionaryitem"
+                     column="incomegrade_id" select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+
         <collection property="systemdictionaryitems" ofType="Systemdictionaryitem">
             <result column="sid" property="id"/>
             <result column="parentid" property="parentid"/>
         </collection>
-    </resultMap>
+
+
+
+     </resultMap>
 
     <insert id="insert" parameterType="com.gxa.p2p.common.domain.Userinfo" useGeneratedKeys="true" keyProperty="id">
         insert into `userinfo` (id, version, bitState, realName,
@@ -55,6 +69,7 @@
 
     </select>
     <select id="getUserInfoAndSystemdictionaryById" resultMap="BaseResultMap">
+
         select ui.id,
                ui.version,
                ui.bitState,
@@ -94,7 +109,10 @@
                 kidCount_id=#{userinfo.kidcountItem.id},
             </if>
             <if test="userinfo.houseconditionItem != null">
-                houseCondition_id=#{userinfo.houseconditionItem.id}
+                houseCondition_id=#{userinfo.houseconditionItem.id},
+            </if>
+            <if test="userinfo.bitstate != null">
+                bitState=#{userinfo.bitstate}
             </if>
 
         </set>
