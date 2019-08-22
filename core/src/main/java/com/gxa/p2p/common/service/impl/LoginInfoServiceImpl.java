@@ -1,15 +1,20 @@
 package com.gxa.p2p.common.service.impl;
 
 import com.gxa.p2p.common.domain.Account;
+import com.gxa.p2p.common.domain.Iplog;
 import com.gxa.p2p.common.domain.LoginInfo;
 import com.gxa.p2p.common.domain.Userinfo;
 import com.gxa.p2p.common.mapper.AccountMapper;
+import com.gxa.p2p.common.mapper.IplogMapper;
 import com.gxa.p2p.common.mapper.LoginInfoMapper;
 import com.gxa.p2p.common.mapper.UserinfoMapper;
 import com.gxa.p2p.common.service.IAccountService;
 import com.gxa.p2p.common.service.ILoginInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 
 
 @Service
@@ -22,6 +27,9 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
 
     @Autowired
     private UserinfoMapper userinfoMapper;
+
+    @Autowired
+    private IplogMapper iplogMapper;
 
     /**
      * 检查用户名是否已存在
@@ -78,12 +86,22 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
     }
 
     @Override
-    public LoginInfo login(String username, String password,int usertype) {
+    public LoginInfo login(String username, String password, int usertype, HttpServletRequest request) {
         LoginInfo loginInfo = logininfoMapper.login(username,password,LoginInfo.USER_WEB);
+        Iplog iplog = new Iplog();
+        iplog.setIp(request.getRemoteAddr());
+        iplog.setUsername(username);
+        iplog.setLogintime(new Date());
         if(loginInfo!=null){
-            return loginInfo;
+            iplog.setState(Iplog.LOGIN_SUCCESS);
+            iplogMapper.insert(iplog);
+
         }else {
-            throw new RuntimeException("登陆失败,用户名或密码无效");
+            iplog.setState(Iplog.LOGIN_FAIL);
+            iplogMapper.insert(iplog);
+
         }
+        return loginInfo;
+
     }
 }
