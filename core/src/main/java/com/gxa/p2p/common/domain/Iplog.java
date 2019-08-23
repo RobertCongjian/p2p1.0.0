@@ -76,4 +76,18 @@ public class Iplog {
     public void setLogintime(Date logintime) {
         this.logintime = logintime;
     }
+
+
+    @Override
+    public String toString() {
+        return "Iplog{" +
+                "id=" + id +
+                ", ip='" + ip + '\'' +
+                ", state=" + state +
+                ", username='" + username + '\'' +
+                ", logininfoid=" + logininfoid +
+                ", usertype=" + usertype +
+                ", logintime=" + logintime +
+                '}';
+    }
 }

@@ -18,7 +18,7 @@ public class LoginInfo {
 
     private Byte usertype;
 
-    private Boolean admin;
+    private Byte admin;
 
     public Long getId() {
         return id;
@@ -60,11 +60,23 @@ public class LoginInfo {
         this.usertype = usertype;
     }
 
-    public Boolean getAdmin() {
+    public Byte getAdmin() {
         return admin;
     }
 
-    public void setAdmin(Boolean admin) {
+    public void setAdmin(Byte admin) {
         this.admin = admin;
+    }
+
+    @Override
+    public String toString() {
+        return "LoginInfo{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", state=" + state +
+                ", usertype=" + usertype +
+                ", admin=" + admin +
+                '}';
     }
 }

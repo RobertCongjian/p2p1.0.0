@@ -8,6 +8,8 @@ import com.gxa.p2p.common.mapper.AccountMapper;
 import com.gxa.p2p.common.mapper.IplogMapper;
 import com.gxa.p2p.common.mapper.LoginInfoMapper;
 import com.gxa.p2p.common.mapper.UserinfoMapper;
+import com.gxa.p2p.common.query.LoginInfoQueryObject;
+import com.gxa.p2p.common.query.PageResultSet;
 import com.gxa.p2p.common.service.IAccountService;
 import com.gxa.p2p.common.service.ILoginInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
+import java.util.List;
 
 
 @Service
@@ -87,7 +90,7 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
 
     @Override
     public LoginInfo login(String username, String password, int usertype, HttpServletRequest request) {
-        LoginInfo loginInfo = logininfoMapper.login(username,password,LoginInfo.USER_WEB);
+        LoginInfo loginInfo = logininfoMapper.login(username,password,usertype);
         Iplog iplog = new Iplog();
         iplog.setIp(request.getRemoteAddr());
         iplog.setUsername(username);
@@ -102,6 +105,31 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
 
         }
         return loginInfo;
+
+    }
+
+    @Override
+    public PageResultSet queryForPage(LoginInfoQueryObject loginInfoQueryObject) {
+        int count = logininfoMapper.queryForCount();
+
+        PageResultSet pageResultSet;
+        //如果存在符合条件的数据，对数据进行分页查询，获取当前页的数据;没有则返回空的数据集
+        if (count > 0) {
+            List<LoginInfo> list = logininfoMapper.queryForPage(loginInfoQueryObject);
+            for(LoginInfo loginInfo:list){
+                System.err.println(loginInfo.toString());
+                System.out.println();
+            }
+            pageResultSet = new PageResultSet(
+                    list,
+                    list.size(),
+                    loginInfoQueryObject.getCurrentPage(),
+                    loginInfoQueryObject.getPageSize());
+        } else {
+            pageResultSet = PageResultSet.empty(loginInfoQueryObject.getPageSize());
+        }
+
+        return pageResultSet;
 
     }
 }

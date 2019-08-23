@@ -6,7 +6,65 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffe1acbd-c0dc-40e6-af19-9b6060b40577" name="Default Changelist" comment="" />
+    <list default="true" id="ffe1acbd-c0dc-40e6-af19-9b6060b40577" name="Default Changelist" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/IplogQueryObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/LoginInfoQueryObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/PageResultSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/QueryObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IplogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/IplogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/domain/Iplog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/mapper/IplogMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/mapper/IplogMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/util/BitStatesTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/util/BitStatesUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/controller/AdminLoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/controller/UserListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/common/header.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/common/menu.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/common/top.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/main.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/user/list.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mgrsite/src/main/webapp/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/IplogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/iplog_list.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website/src/main/webapp/images/lufei.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a34b896-265c-4276-817e-f5947aed3e01.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/60654377-cbea-4dc7-b9fa-42237f2b705e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Iplog.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Iplog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/LoginInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/LoginInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LoginInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LoginInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LoginInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LoginInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/ILoginInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/ILoginInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/LoginInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/LoginInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/domain/LoginInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/domain/LoginInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/domain/Userinfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/domain/Userinfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/mapper/LoginInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/mapper/LoginInfoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/mapper/LoginInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/mapper/LoginInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/mapper/UserinfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/mapper/UserinfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/service/ILoginInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/service/ILoginInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/service/impl/LoginInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/service/impl/LoginInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mgrsite/src/main/resources/spring_mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mgrsite/src/main/resources/spring_mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mgrsite/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mgrsite/target/classes/spring_mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mgrsite/target/classes/spring_mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/main/webapp/images/lufei .jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/target/classes/com/gxa/p2p/common/controller/LoginInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/website/target/classes/com/gxa/p2p/common/controller/LoginInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/target/classes/com/gxa/p2p/common/controller/UserInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/website/target/classes/com/gxa/p2p/common/controller/UserInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/classes/com/gxa/p2p/common/controller/LoginInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/classes/com/gxa/p2p/common/controller/LoginInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/classes/com/gxa/p2p/common/controller/UserInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/classes/com/gxa/p2p/common/controller/UserInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/lib/core-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/lib/core-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/views/common/footer-tpl.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/views/common/footer-tpl.ftl" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/core/target/" />
@@ -17,6 +75,12 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
   </component>
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
@@ -48,34 +112,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="test: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="test@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="test: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="account: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="test@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="test: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="logininfo: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="test@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="test: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="systemdictionary: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="test@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="test: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="userinfo: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -84,103 +120,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="797">
+              <caret line="79" column="62" lean-forward="true" selection-start-line="79" selection-start-column="62" selection-end-line="79" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/QueryObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+              <folding>
+                <element signature="e#287#288#0" expanded="true" />
+                <element signature="e#338#339#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/UserInfoController.java">
+        <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/iplog_list.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="83" column="48" lean-forward="true" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="2020">
+              <caret line="101" column="29" lean-forward="true" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="820">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/userInfo.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="90" column="53" selection-start-line="90" selection-start-column="53" selection-end-line="90" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Userinfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IUserInfoService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/leftmenu-tpl.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1397#1398#0" expanded="true" />
-                <element signature="e#1473#1474#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.xml">
+        <entry file="file://$PROJECT_DIR$/website/src/main/webapp/js/My97DatePicker/calendar.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="6" column="73" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
+              <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.java">
+        <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/links-tpl.ftl">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/src/main/webapp/css/account.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/IplogController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+            <state relative-caret-position="369">
+              <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/controller/IndexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/controller/UserListController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/IplogQueryObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -203,7 +239,6 @@
       <find>regis</find>
       <find>action</find>
       <find>login.</find>
-      <find>image</find>
       <find>login</find>
       <find>httpsession</find>
       <find>最后登录时间</find>
@@ -213,10 +248,15 @@
       <find>个人学</find>
       <find>house</find>
       <find>&lt;p1</find>
-      <find>form</find>
       <find>userInfoForm</find>
       <find>submitBtn</find>
       <find>upd</find>
+      <find>required</find>
+      <find>image</find>
+      <find>logintime</find>
+      <find>查询</find>
+      <find>form</find>
+      <find>form-control</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -225,41 +265,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/website/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/website/src/main/java/controller/TestController.java" />
-        <option value="$PROJECT_DIR$/website/src/main/java/com/gxa/cdut/controller/TestController.java" />
-        <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/getUser.jsp" />
-        <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/servlet/WebPathInitServlet.java" />
-        <option value="$PROJECT_DIR$/core/pom.xml" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Logininfo.java" />
-        <option value="$PROJECT_DIR$/core/src/main/resources/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/LogininfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/core/src/main/resources/jdbc.properties" />
-        <option value="$PROJECT_DIR$/website/src/main/webapp/login.html" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/IAccountServiceImpl.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LoginInfoMapper.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/ILoginInfoService.java" />
-        <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/navbar-tpl.ftl" />
-        <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/links-tpl.ftl" />
-        <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/footer-tpl.ftl" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LoginInfoMapper.xml" />
-        <option value="$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/SysConstant.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IAccountService.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/AccountServiceImpl.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/AccountMapper.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/AccountMapper.xml" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Account.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/util/SysConstant.java" />
         <option value="$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/AccountController.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/LoginInfo.java" />
-        <option value="$PROJECT_DIR$/core/src/main/resources/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/LoginInfoController.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/LoginInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/website/src/main/webapp/register.html" />
-        <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/personal.ftl" />
         <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/head-tpl.ftl" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Systemdictionary.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryMapper.java" />
@@ -267,15 +274,48 @@
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Systemdictionaryitem.java" />
         <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/userInfo.ftl" />
         <option value="$PROJECT_DIR$/website/src/main/resources/spring_mvc.xml" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Userinfo.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.xml" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.java" />
         <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/leftmenu-tpl.ftl" />
-        <option value="$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/UserInfoController.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IUserInfoService.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/UserInfoController.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.xml" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/util/BitStatesTest.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Userinfo.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.xml" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/core/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/LoginInfoController.java" />
+        <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/personal.ftl" />
+        <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/footer-tpl.ftl" />
+        <option value="$PROJECT_DIR$/core/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/mgrsite/src/main/resources/spring_mvc.xml" />
+        <option value="$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/controller/AdminLoginController.java" />
+        <option value="$PROJECT_DIR$/mgrsite/src/main/webapp/login.html" />
+        <option value="$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/common/header.ftl" />
+        <option value="$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/controller/userListController.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/ILoginInfoService.java" />
+        <option value="$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/controller/UserListController.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LoginInfoMapper.java" />
+        <option value="$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/common/menu.ftl" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LoginInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/LoginInfo.java" />
+        <option value="$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/controller/IplogController.java" />
+        <option value="$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/iplog_list.ftl" />
+        <option value="$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/user/iplog_list.ftl" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/iplogQueryObject.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Iplog.java" />
+        <option value="$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/user/list.ftl" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IplogService.java" />
+        <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/iplog_list.ftl" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/IplogQueryObject.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/LoginInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/IplogServiceImpl.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.xml" />
+        <option value="$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/IplogController.java" />
       </list>
     </option>
   </component>
@@ -335,18 +375,266 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="query" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="mgrsite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="mgrsite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="mgrsite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="mgrsite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="mgrsite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="mgrsite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="mgrsite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="mgrsite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="mgrsite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
               <item name="website" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="My97DatePicker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -357,13 +645,13 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565968119125" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3873582" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="GrepConsole" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -371,10 +659,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\hp\IdeaProjects\p2p1.0.0\website\src\main\webapp\WEB-INF\views" />
-      <recent name="D:\Users\hp\IdeaProjects\p2p1.0.0\website\src\main\java\com\gxa\p2p\common\controller" />
-      <recent name="D:\Users\hp\IdeaProjects\p2p1.0.0\website\src\main\webapp\WEB-INF" />
-      <recent name="D:\Users\hp\IdeaProjects\p2p1.0.0\core\src\main\java\com\gxa\p2p\common\util" />
-      <recent name="D:\Users\hp\IdeaProjects\p2p1.0.0\core\src\main\resources" />
+      <recent name="D:\Users\hp\IdeaProjects\p2p1.0.0\mgrsite\src\main\webapp\WEB-INF\views\common" />
+      <recent name="D:\Users\hp\IdeaProjects\p2p1.0.0\mgrsite\src\main\webapp\WEB-INF\views\user" />
+      <recent name="D:\Users\hp\IdeaProjects\p2p1.0.0\core\src\main\java\com\gxa\p2p\common" />
+      <recent name="D:\Users\hp\IdeaProjects\p2p1.0.0\mgrsite\src\main\webapp\WEB-INF" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.gxa.p2p.common.servlet" />
@@ -382,6 +670,10 @@
       <recent name="controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\hp\IdeaProjects\p2p1.0.0\mgrsite\src\main\webapp\WEB-INF\views\user" />
+      <recent name="D:\Users\hp\IdeaProjects\p2p1.0.0\mgrsite\src\main\webapp\WEB-INF\views" />
+      <recent name="D:\Users\hp\IdeaProjects\p2p1.0.0\mgrsite\src\main\webapp\WEB-INF\views\common" />
+      <recent name="D:\Users\hp\IdeaProjects\p2p1.0.0\mgrsite\src\main\webapp" />
       <recent name="D:\Users\hp\IdeaProjects\p2p1.0.0\core\src\main\resources" />
     </key>
   </component>
@@ -653,16 +945,136 @@
       <workItem from="1566354216708" duration="30923000" />
       <workItem from="1566398971652" duration="4726000" />
       <workItem from="1566433687112" duration="919000" />
+      <workItem from="1566436055617" duration="28099000" />
+      <workItem from="1566519952250" duration="7000" />
+      <workItem from="1566519969064" duration="529000" />
+      <workItem from="1566520545655" duration="1521000" />
+      <workItem from="1566522175955" duration="5379000" />
+      <workItem from="1566528357525" duration="22207000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1566436362876</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1566436362876</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first commit">
+      <created>1566444902511</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1566444902511</updated>
+    </task>
+    <task id="LOCAL-00003" summary="second commit">
+      <created>1566459476095</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1566459476095</updated>
+    </task>
+    <task id="LOCAL-00004" summary="second commit">
+      <created>1566459500920</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1566459500920</updated>
+    </task>
+    <task id="LOCAL-00005" summary="second commit">
+      <created>1566459520363</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1566459520363</updated>
+    </task>
+    <task id="LOCAL-00006" summary="second commit">
+      <created>1566459589089</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1566459589089</updated>
+    </task>
+    <task id="LOCAL-00007" summary="first commit">
+      <created>1566481517434</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1566481517434</updated>
+    </task>
+    <task id="LOCAL-00008" summary="first commit">
+      <created>1566481534626</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1566481534626</updated>
+    </task>
+    <task id="LOCAL-00009" summary="second commit">
+      <created>1566481566402</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1566481566402</updated>
+    </task>
+    <task id="LOCAL-00010" summary="second commit">
+      <created>1566481596554</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1566481596555</updated>
+    </task>
+    <task id="LOCAL-00011" summary="first commit">
+      <created>1566485892404</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1566485892404</updated>
+    </task>
+    <task id="LOCAL-00012" summary="first commit">
+      <created>1566523838084</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1566523838084</updated>
+    </task>
+    <task id="LOCAL-00013" summary="first commit">
+      <created>1566523851616</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1566523851616</updated>
+    </task>
+    <task id="LOCAL-00014" summary="first commit">
+      <created>1566523864152</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1566523864152</updated>
+    </task>
+    <task id="LOCAL-00015" summary="first commit">
+      <created>1566525124605</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1566525124605</updated>
+    </task>
+    <task id="LOCAL-00016" summary="first commit">
+      <created>1566525258507</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1566525258507</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90473000" />
+    <option name="totallyTimeSpent" value="148215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25083837" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27095908" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
@@ -672,9 +1084,9 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49966466" weight="0.043923866" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49899396" weight="0.043923866" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40556368" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49966466" weight="0.04418262" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49899396" weight="0.78939617" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40500736" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -682,451 +1094,439 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50033534" side_tool="true" weight="0.31185943" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49966466" weight="0.37335286" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49966466" weight="0.371134" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.04398827" />
       <window_info anchor="bottom" id="JRebel Console" order="15" sideWeight="0.50033534" side_tool="true" weight="0.329429" />
       <window_info anchor="bottom" id="Application Servers" order="16" sideWeight="0.49966466" weight="0.043923866" />
       <window_info anchor="bottom" id="JRebel Executor" order="17" sideWeight="0.49966466" weight="0.19619326" />
       <window_info anchor="bottom" id="Database Console" order="18" weight="0.329429" />
       <window_info anchor="bottom" id="Problems" order="19" weight="0.329429" />
+      <window_info anchor="bottom" id="Tail" order="20" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24949698" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" weight="0.13749161" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.06639839" />
+      <window_info anchor="right" id="Database" order="6" weight="0.04158283" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Mybatis datasource" order="9" side_tool="true" />
     </layout>
     <layout-to-restore>
-      <window_info id="Designer" order="0" />
-      <window_info id="JRebel" order="1" side_tool="true" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Web" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.25" />
-      <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" />
-      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" visible="true" weight="0.3298969" />
-      <window_info anchor="bottom" id="Java Enterprise" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="5" />
-      <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="JRebel Console" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="8" />
-      <window_info anchor="bottom" id="Find" order="9" />
-      <window_info anchor="bottom" id="Run" order="10" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="14" />
-      <window_info anchor="right" id="Maven" order="0" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27095908" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="JRebel" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49966466" weight="0.04418262" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49899396" visible="true" weight="0.04418262" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40500736" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50033534" side_tool="true" weight="0.31185943" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49966466" weight="0.371134" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.04398827" />
+      <window_info anchor="bottom" id="JRebel Console" order="15" sideWeight="0.50033534" side_tool="true" weight="0.329429" />
+      <window_info anchor="bottom" id="Application Servers" order="16" sideWeight="0.49966466" weight="0.043923866" />
+      <window_info anchor="bottom" id="JRebel Executor" order="17" sideWeight="0.49966466" weight="0.19619326" />
+      <window_info anchor="bottom" id="Database Console" order="18" weight="0.329429" />
+      <window_info anchor="bottom" id="Problems" order="19" weight="0.329429" />
+      <window_info anchor="bottom" id="Tail" order="20" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24949698" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.13749161" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.04158283" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Mybatis datasource" order="9" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="second commit" />
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/js/jquery/jquery-2.1.3.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/.IntelliJIdea2019.1/system/tomcat/Unnamed_p2p1_0_4/work/Catalina/localhost/website/org/apache/jsp/index_jsp.java">
+    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/LoginInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#4902#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar!/javax/servlet/http/HttpSession.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state relative-caret-position="940">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/util/UserContext.java">
+    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/UserInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/util/SysConstant.java">
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/resources/spring_mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/util/MD5.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mgrsite/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="63" column="19" selection-start-line="63" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        <state relative-caret-position="360">
+          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+        <state relative-caret-position="204">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="40" column="11" lean-forward="true" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="80">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/util/JSONResult.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Userinfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding>
-            <element signature="e#222#223#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="20">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="-735">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/resources/generatorConfig.xml">
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/controller/AdminLoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="78" column="61" lean-forward="true" selection-start-line="78" selection-start-column="61" selection-end-line="78" selection-end-column="61" />
+        <state relative-caret-position="-6">
+          <caret line="25" column="51" lean-forward="true" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/login.html">
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/common/iplog_list.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+        <state relative-caret-position="340">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/pom.xml">
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/common/head-tpl.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/common/leftmenu-tpl.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/common/links-tpl.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/common/header.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+        <state relative-caret-position="80">
+          <caret line="4" column="80" selection-start-line="4" selection-start-column="80" selection-end-line="4" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/common/navbar-tpl.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/common/top.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/common/menu.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+        <state relative-caret-position="320">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/ILoginInfoService.java">
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/user/iplog_list.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        <state relative-caret-position="240">
+          <caret line="42" column="43" lean-forward="true" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/main.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/userInfo.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="102" column="20" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/leftmenu-tpl.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1240">
+          <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/AccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/AccountServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#534#535#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryMapper.java" />
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/AccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Systemdictionary.java" />
-    <entry file="file://$PROJECT_DIR$/website/src/main/resources/spring_mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="54" column="8" lean-forward="true" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-580">
-          <caret line="78" column="36" lean-forward="true" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#3;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/servlet/WebPathInitServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="100">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/LoginInfoQueryObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IplogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/views/user/list.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LoginInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Iplog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+          <folding>
+            <element signature="e#1293#1294#0" expanded="true" />
+            <element signature="e#1325#1326#0" expanded="true" />
+            <element signature="e#1373#1374#0" expanded="true" />
+            <element signature="e#1415#1416#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/LoginInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LoginInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/LoginInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="77" column="5" lean-forward="true" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+        <state relative-caret-position="-100">
+          <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
+            <element signature="e#1272#1273#0" expanded="true" />
+            <element signature="e#1312#1313#0" expanded="true" />
+            <element signature="e#1346#1347#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/LoginInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="51" column="35" lean-forward="true" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Systemdictionaryitem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/AccountMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LoginInfoMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="469">
+          <caret line="32" column="43" lean-forward="true" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IAccountService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/AccountMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/personal.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/links-tpl.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/loadSystemDictionary-macro.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/navbar-tpl.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/footer-tpl.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/head-tpl.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/userInfo.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="90" column="53" selection-start-line="90" selection-start-column="53" selection-end-line="90" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Userinfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IUserInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/leftmenu-tpl.ftl">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/UserServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/LoginInfoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="361">
+          <caret line="124" column="32" lean-forward="true" selection-start-line="124" selection-start-column="32" selection-end-line="124" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1397#1398#0" expanded="true" />
-            <element signature="e#1473#1474#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/IplogServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        <state relative-caret-position="85">
+          <caret line="25" column="72" lean-forward="true" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.xml">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/ILoginInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/PageResultSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/css/account.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/links-tpl.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/js/My97DatePicker/calendar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="6" column="73" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
+          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/UserInfoController.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/IplogQueryObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="83" column="48" lean-forward="true" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
+        <state relative-caret-position="219">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/query/QueryObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+          <folding>
+            <element signature="e#287#288#0" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/IplogMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="797">
+          <caret line="79" column="62" lean-forward="true" selection-start-line="79" selection-start-column="62" selection-end-line="79" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/java/com/gxa/p2p/controller/UserListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/IplogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/iplog_list.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2020">
+          <caret line="101" column="29" lean-forward="true" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1189,7 +1589,6 @@
             <option name="proportions">
               <list>
                 <option value="0.3873582" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

@@ -58,4 +58,19 @@
           and usertype = #{usertype}
     </select>
 
+    <select id="queryForCount" resultType="int">
+        select count(*) from logininfo
+    </select>
+
+    <select id="queryForPage" parameterType="LoginInfoQueryObject" resultMap="BaseResultMap">
+        select
+            username,
+            state,
+            usertype,
+            admin
+        from `logininfo`
+        order by username desc
+        limit #{start},#{pageSize}
+    </select>
+
 </mapper>

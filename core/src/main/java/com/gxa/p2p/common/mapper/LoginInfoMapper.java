@@ -1,6 +1,8 @@
 package com.gxa.p2p.common.mapper;
 
-import com.gxa.p2p.common.domain.LoginInfo;import org.apache.ibatis.annotations.Param;
+import com.gxa.p2p.common.domain.LoginInfo;
+import com.gxa.p2p.common.query.LoginInfoQueryObject;
+import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface LoginInfoMapper {
@@ -25,4 +27,8 @@ public interface LoginInfoMapper {
 
 
     LoginInfo login(@Param("username") String username, @Param("password") String password, @Param("usertype")int usertype);
+
+    int queryForCount();
+
+    List<LoginInfo> queryForPage(LoginInfoQueryObject loginInfoQueryObject);
 }
