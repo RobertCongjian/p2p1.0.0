@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -19,7 +20,7 @@ public class LoginInfoController {
     @RequestMapping("checkUsername")
     @ResponseBody
     public boolean checkUsername(String username) {
-        int count  = iLoginInfoService.checkUsername(username);
+        int count = iLoginInfoService.checkUsername(username);
         return count <= 0;
     }
 
@@ -41,17 +42,20 @@ public class LoginInfoController {
 
     @RequestMapping("login")
     @ResponseBody
-    public JSONResult login(String username, String password, HttpSession session){
+    public JSONResult login(String username, String password, HttpSession session, HttpServletRequest request) {
         JSONResult json = new JSONResult();
-        try{
-            LoginInfo loginInfo = iLoginInfoService.login(username,password,LoginInfo.USER_WEB);
+
+        LoginInfo loginInfo = iLoginInfoService.login(username, password, LoginInfo.USER_WEB, request);
+        if (loginInfo != null) {
             json.setMsg(LoginInfo.SUCCESS_MSG);
             json.setSuccess(true);
             session.setAttribute("logininfo", loginInfo);
-        }catch (RuntimeException re){
+        } else {
             json.setSuccess(false);
-            json.setMsg(re.getMessage());
+            json.setMsg("登录失败，密码或账户错误！");
         }
+
+
         return json;
     }
 }
