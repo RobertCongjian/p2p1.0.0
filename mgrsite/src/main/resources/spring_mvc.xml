@@ -13,7 +13,7 @@
     <import resource="classpath:applicationContext.xml"/>
 
     <!--1.开启Springioc 自动扫描注解包  只对mvc的包做扫描  -->
-    <context:component-scan base-package="com.gxa.cdut.controller"/>
+    <context:component-scan base-package="com.gxa.p2p.controller"/>
 
     <!--2. 开启注解，对jackson数据支持 -->
     <mvc:annotation-driven/>
