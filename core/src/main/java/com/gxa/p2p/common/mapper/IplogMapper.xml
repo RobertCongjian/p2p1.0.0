@@ -19,7 +19,7 @@
       loginInfoId, userType, loginTime
       )
     values (#{ip,jdbcType=VARCHAR}, #{state,jdbcType=TINYINT}, #{username,jdbcType=VARCHAR}, 
-      #{logininfoid,jdbcType=BIGINT}, #{usertype,jdbcType=TINYINT}, now()
+      #{logininfoid,jdbcType=BIGINT}, #{usertype,jdbcType=TINYINT}, #{logintime,jdbcType=TIMESTAMP}
       )
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.gxa.p2p.common.domain.Iplog" >
