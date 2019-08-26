@@ -33,4 +33,16 @@ public class SysConstant {
 			"5000.0000");
 
 
+	/**
+	 * 发送手机验证码的时间间隔
+	 */
+	public static final long SEND_VERIFYCODE_INTERVAL  =  30 ; //秒
+
+	/**
+	 * 手机验证码的有效时间
+	 */
+	public static final long VERIFYCODE_VALID_TIME  =  84600 ; //秒
+
+
+    public static final long EMAIL_VALID_DAY = 1;
 }

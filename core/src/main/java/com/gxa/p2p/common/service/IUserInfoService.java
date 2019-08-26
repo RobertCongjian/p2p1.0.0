@@ -16,4 +16,22 @@ public interface IUserInfoService {
     List<Systemdictionaryitem> selectItemBysn(String incomeGrades);
 
     Userinfo  getUserInfoById(Long id);
+
+    /**
+     *
+     * 用户绑定手机
+     *
+     * @param phoneNumber
+     * @param verifyCode
+     */
+    void bindPhone(String phoneNumber, String verifyCode);
+
+    /**
+     * 绑定邮箱
+     *
+     * @param uuid
+     */
+    void bindEmail(String uuid);
+
+
 }

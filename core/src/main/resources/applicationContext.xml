@@ -17,7 +17,10 @@
 	<!-- 在web环境下,建议一定要手动配置 -->
 	<context:annotation-config />
 	<context:component-scan base-package="com.gxa.p2p"/>
-	<context:property-placeholder location="classpath:jdbc.properties"/>
+	<context:property-placeholder location="classpath:jdbc.properties,classpath:sms.properties,classpath:mail.properties"/>
+
+
+
 
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
 		<property name="driverClassName" value="${jdbc.driver}"/>

@@ -17,15 +17,20 @@
         <result column="realauthid" property="realauthid" jdbcType="BIGINT"/>
         <result column="email" property="email" jdbcType="VARCHAR"/>
         <association property="educationbackgroundItem" javaType="Systemdictionaryitem"
-                     column="educationbackground_id" select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+                     column="educationbackground_id"
+                     select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
         <association property="kidcountItem" javaType="Systemdictionaryitem"
-                     column="kidcount_id" select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+                     column="kidcount_id"
+                     select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
         <association property="marriageItem" javaType="Systemdictionaryitem"
-                     column="marriage_id" select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+                     column="marriage_id"
+                     select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
         <association property="houseconditionItem" javaType="Systemdictionaryitem"
-                     column="housecondition_id" select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+                     column="housecondition_id"
+                     select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
         <association property="incomegradeItem" javaType="Systemdictionaryitem"
-                     column="incomegrade_id" select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+                     column="incomegrade_id"
+                     select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
 
         <collection property="systemdictionaryitems" ofType="Systemdictionaryitem">
             <result column="sid" property="id"/>
@@ -33,8 +38,7 @@
         </collection>
 
 
-
-     </resultMap>
+    </resultMap>
 
     <insert id="insert" parameterType="com.gxa.p2p.common.domain.Userinfo" useGeneratedKeys="true" keyProperty="id">
         insert into `userinfo` (id, version, bitState, realName,
@@ -112,7 +116,22 @@
                 houseCondition_id=#{userinfo.houseconditionItem.id},
             </if>
             <if test="userinfo.bitstate != null">
-                bitState=#{userinfo.bitstate}
+                bitState=#{userinfo.bitstate},
+            </if>
+            <if test="userinfo.phonenumber != null and userinfo.phonenumber != ''">
+                phoneNumber = #{userinfo.phonenumber},
+            </if>
+            <if test="userinfo.idnumber != null and userinfo.idnumber != ''">
+                idNumber = #{userinfo.idnumber} ,
+            </if>
+            <if test="userinfo.email != null and userinfo.email != ''">
+                email = #{userinfo.email},
+            </if>
+            <if test="userinfo.authscore != null">
+                authScore=#{userinfo.authscore},
+            </if>
+            <if test="userinfo.realauthid != null">
+                realauthid=#{userinfo.realauthid}
             </if>
 
         </set>

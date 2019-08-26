@@ -122,7 +122,7 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
             }
             pageResultSet = new PageResultSet(
                     list,
-                    list.size(),
+                    count,
                     loginInfoQueryObject.getCurrentPage(),
                     loginInfoQueryObject.getPageSize());
         } else {
