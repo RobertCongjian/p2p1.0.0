@@ -13,6 +13,16 @@ public class Systemdictionaryitem {
 
     private String intro;
 
+    private Systemdictionary systemdictionary;
+
+    public Systemdictionary getSystemdictionary() {
+        return systemdictionary;
+    }
+
+    public void setSystemdictionary(Systemdictionary systemdictionary) {
+        this.systemdictionary = systemdictionary;
+    }
+
     public Long getId() {
         return id;
     }

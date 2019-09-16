@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gxa.p2p.business.mapper.BidRequestAuditHistoryMapper">
+    <resultMap id="BaseResultMap" type="com.gxa.p2p.business.domain.BidRequestAuditHistory">
+        <result property="state" column="state"/>
+        <result property="remark" column="remark"/>
+        <result property="auditTime" column="auditTime"/>
+        <result property="applyTime" column="applyTime"/>
+        <result property="auditorId" column="auditor_id"/>
+        <result property="applierId" column="applier_id"/>
+        <result property="bidRequestId" column="bibidRequestId"/>
+        <result property="auditType" column="auditType"/>
+        <association property="auditor" column="auditor_id" javaType="LoginInfo"
+                     select="com.gxa.p2p.common.mapper.LoginInfoMapper.selectByPrimaryKey"/>
+    </resultMap>
+
+    <insert id="insertInfo" parameterType="BidRequestAuditHistory">
+        insert into bidrequestaudithistory (state, remark, auditTime, applyTime, auditor_id, applier_id, bidRequestId,
+                                            auditType)
+        values (#{state}, #{remark}, #{auditTime}, #{applyTime}, #{auditorId}, #{applierId}, #{bidRequestId},
+                #{auditType});
+    </insert>
+    <select id="queryByBidRequestId" resultMap="BaseResultMap">
+        select id,
+               state,
+               remark,
+               auditTime,
+               applyTime,
+               auditor_id,
+               applier_id,
+               bidRequestId,
+               auditType
+        from bidrequestaudithistory
+        where id = #{id};
+
+    </select>
+    <select id="queryAllInfo" resultMap="BaseResultMap">
+        select id,
+               state,
+               remark,
+               auditTime,
+               applyTime,
+               auditor_id,
+               applier_id,
+               bidRequestId,
+               auditType
+        from bidrequestaudithistory;
+    </select>
+    <select id="listAuditHistorayByBidRequest" resultMap="BaseResultMap">
+        select id,
+               state,
+               remark,
+               auditTime,
+               applyTime,
+               auditor_id,
+               applier_id,
+               bidRequestId,
+               auditType
+        from bidrequestaudithistory
+        where bidRequestId = #{id};
+    </select>
+</mapper>

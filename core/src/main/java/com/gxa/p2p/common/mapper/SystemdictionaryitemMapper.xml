@@ -8,6 +8,9 @@
     <result column="tvalue" property="tvalue" jdbcType="VARCHAR" />
     <result column="sequence" property="sequence" jdbcType="TINYINT" />
     <result column="intro" property="intro" jdbcType="VARCHAR" />
+    <association property="systemdictionary" javaType="Systemdictionary">
+      <result column="kinds" property="title"/>
+    </association>
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from `systemdictionaryitem`
@@ -36,8 +39,9 @@
   </select>
 
   <select id="selectAll" resultMap="BaseResultMap" >
-    select id, parentId, title, tvalue, sequence, intro
-    from `systemdictionaryitem`
+    SELECT sdi.id,sdi.title,sd.title as kinds
+    FROM systemdictionaryitem as sdi, systemdictionary as sd
+    WHERE  sd.id =  sdi.parentId
   </select>
 
   <select id="selectItemBysn" parameterType="String" resultMap="BaseResultMap">

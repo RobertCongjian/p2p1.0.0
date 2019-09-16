@@ -17,17 +17,17 @@ public class Userinfo {
 
     private String phonenumber;
 
-    private Long incomegradeId=1L;
+    private Long incomegradeId=0L;
 
-    private Long marriageId=5L;
+    private Long marriageId=0L;
 
-    private Long kidcountId=7L;
+    private Long kidcountId=0L;
 
-    private Long educationbackgroundId=3L;
+    private Long educationbackgroundId=0L;
 
-    private Integer authscore;
+    private Integer authscore=33;
 
-    private Long houseconditionId=9L;
+    private Long houseconditionId=0L;
 
     private Long realauthid;
 
@@ -251,4 +251,11 @@ public class Userinfo {
         return BitStatesUtils.hasState(this.bitstate,
                 BitStatesUtils.OP_BIND_EMAIL);
     }
+
+    //判断是否有一个标
+    public boolean getIsApply() {
+        return BitStatesUtils.hasState(this.bitstate,
+                BitStatesUtils.OP_HAS_BIDREQUEST_PROCESS);
+    }
+
 }

@@ -1,10 +1,14 @@
 package com.gxa.p2p.common.controller;
 
 import com.gxa.p2p.common.domain.LoginInfo;
+import com.gxa.p2p.common.domain.Userinfo;
 import com.gxa.p2p.common.service.ILoginInfoService;
+import com.gxa.p2p.common.service.IUserInfoService;
 import com.gxa.p2p.common.util.JSONResult;
+import com.gxa.p2p.common.util.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -16,6 +20,9 @@ public class LoginInfoController {
 
     @Autowired
     private ILoginInfoService iLoginInfoService;
+
+    @Autowired
+    private IUserInfoService iUserInfoService;
 
     @RequestMapping("checkUsername")
     @ResponseBody
@@ -42,7 +49,7 @@ public class LoginInfoController {
 
     @RequestMapping("login")
     @ResponseBody
-    public JSONResult login(String username, String password, HttpSession session, HttpServletRequest request) {
+    public JSONResult login(String username, String password, HttpSession session, HttpServletRequest request, Model model) {
         JSONResult json = new JSONResult();
 
         LoginInfo loginInfo = iLoginInfoService.login(username, password, LoginInfo.USER_WEB, request);
@@ -50,6 +57,7 @@ public class LoginInfoController {
             json.setMsg(LoginInfo.SUCCESS_MSG);
             json.setSuccess(true);
             session.setAttribute("logininfo", loginInfo);
+
         } else {
             json.setSuccess(false);
             json.setMsg("登录失败，密码或账户错误！");

@@ -109,12 +109,15 @@
                         <div class="col-sm-8">
                             <select class="form-control" id="educationbackgroundItem" name="educationbackgroundItem.id"
                                     style="width: 180px" autocomplate="off">
+                                <option value="0">-请选择-</option>
                                 <#list educationBackgrounds as item>
                                     <option value="${item.id}">${item.title}</option>
                                 </#list>
                             </select>
                             <script type="text/javascript">
+                                <#if (userinfo.educationbackgroundId)!=0>
                                 $("#educationbackgroundItem option[value=${userinfo.educationbackgroundItem.id!-1}]").attr("selected", true);
+                                </#if>
                             </script>
 
                         </div>
@@ -128,12 +131,16 @@
                             <select class="form-control" id="incomegradeItem" name="incomegradeItem.id"
                                     style="width: 180px"
                                     autocomplate="off">
+                                <option value="0">-请选择-</option>
                                 <#list incomeGrades as item>
                                     <option value="${item.id}">${item.title}</option>
                                 </#list>
                             </select>
                             <script type="text/javascript">
+                                <#if (userinfo.incomegradeId)!=0>
                                 $("#incomegradeItem option[value=${userinfo.incomegradeItem.id!-1}]").attr("selected", true);
+                                </#if>
+
                             </script>
                         </div>
                     </div>
@@ -145,12 +152,15 @@
                         <div class="col-sm-8">
                             <select class="form-control" id="marriageItem" name="marriageItem.id" style="width: 180px"
                                     autocomplate="off">
+                                <option value="0">-请选择-</option>
                                 <#list marriages as item>
                                     <option value="${item.id}">${item.title}</option>
                                 </#list>
                             </select>
                             <script type="text/javascript">
+                                <#if (userinfo.marriageId)!=0>
                                 $("#marriageItem option[value=${userinfo.marriageItem.id!-1}]").attr("selected", true);
+                                </#if>
                             </script>
                         </div>
                     </div>
@@ -162,12 +172,17 @@
                         <div class="col-sm-8">
                             <select class="form-control" id="kidcountItem" name="kidcountItem.id" style="width: 180px"
                                     autocomplate="off">
+                                <option value="0">-请选择-</option>
                                 <#list kidCounts as item>
+
                                     <option value="${item.id}">${item.title}</option>
                                 </#list>
                             </select>
                             <script type="text/javascript">
+                                <#if (userinfo.kidcountId)!=0>
                                 $("#kidcountItem option[value=${userinfo.kidcountItem.id!-1}]").attr("selected", true);
+
+                                </#if>
                             </script>
                         </div>
                     </div>
@@ -179,14 +194,19 @@
                         <div class="col-sm-8">
                             <select class="form-control" id="houseconditionItem" name="houseconditionItem.id"
                                     style="width: 180px" autocomplate="off">
+                                <option value="0">-请选择-</option>
+
                                 <#list houseConditions as item>
+
                                     <option value="${item.id}">${item.title}</option>
 
                                 </#list>
 
                             </select>
                             <script type="text/javascript">
+                                <#if (userinfo.houseconditionId)!=0>
                                 $("#houseconditionItem option[value=${userinfo.houseconditionItem.id!-1}]").attr("selected", true);
+                                </#if>
                             </script>
 
                         </div>

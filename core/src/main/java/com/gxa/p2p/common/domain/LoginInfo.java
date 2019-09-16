@@ -18,7 +18,7 @@ public class LoginInfo {
 
     private Byte usertype;
 
-    private Byte admin;
+    private Byte admin = 0;
 
     public Long getId() {
         return id;

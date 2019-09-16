@@ -74,7 +74,7 @@
 
 
         <!--多个表写多个table-->
-        <table tableName="mailverify" delimitIdentifiers="true">
+        <table tableName="systemdictionary" delimitIdentifiers="true">
             <!-- 参考 javaModelGenerator 的 constructorBased属性 -->
             <property name="constructorBased" value="false"/>
             <generatedKey column="id" sqlStatement="JDBC"/>

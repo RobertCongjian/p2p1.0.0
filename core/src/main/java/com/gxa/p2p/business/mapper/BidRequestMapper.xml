@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gxa.p2p.business.mapper.BidRequestMapper">
+
+    <resultMap id="BidRequestMap" type="com.gxa.p2p.business.domain.BidRequest">
+        <id property="id" column="id"/>
+        <result property="version" column="version"/>
+        <result property="bidRequestType" column="bidRequestType"/>
+        <result property="bidRequestState" column="bidRequestState"/>
+        <result property="bidRequestAmount" column="bidRequestAmount"/>
+        <result property="currentRate" column="currentRate"/>
+        <result property="monthes2Return" column="monthes2Return"/>
+        <result property="bidCount" column="bidCount"/>
+        <result property="totalRewardAmount" column="totalRewardAmount"/>
+        <result property="currentSum" column="currentSum"/>
+        <result property="title" column="title"/>
+        <result property="description" column="description"/>
+        <result property="note" column="note"/>
+        <result property="disableDate" column="disableDate"/>
+        <result property="disableDays" column="disableDays"/>
+        <result property="minBidAmount" column="minBidAmount"/>
+        <result property="applyTime" column="applyTime"/>
+        <result property="publishTime" column="publishTime"/>
+        <result property="returnType" column="returnType"/>
+        <association property="createUser" javaType="LoginInfo" column="createuser_id"
+                     select="com.gxa.p2p.common.mapper.LoginInfoMapper.selectByPrimaryKey"/>
+
+        <collection property="bids" ofType="Bid" column="id"
+                    select="com.gxa.p2p.business.mapper.BidMapper.getBidsById"/>
+
+    </resultMap>
+
+    <insert id="insertBidRequest" parameterType="BidRequest">
+        insert into bidrequest
+        <trim prefix="(" suffix=")" prefixOverrides=",">
+            <if test="version != null">
+                ,version
+            </if>
+            <if test="bidRequestType != null">
+                ,bidRequestType
+            </if>
+            <if test="bidRequestState != null">
+                ,bidRequestState
+            </if>
+            <if test="bidRequestAmount != null">
+                ,bidRequestAmount
+            </if>
+            <if test="currentRate != null">
+                ,currentRate
+            </if>
+            <if test="monthes2Return != null">
+                ,monthes2Return
+            </if>
+            <if test="bidCount != null">
+                ,bidCount
+            </if>
+            <if test="totalRewardAmount != null">
+                ,totalRewardAmount
+            </if>
+            <if test="currentSum != null">
+                ,currentSum
+            </if>
+            <if test="title != null and title != ''">
+                ,title
+            </if>
+            <if test="description != null and description != ''">
+                ,description
+            </if>
+            <if test="note != null and note != ''">
+                ,note
+            </if>
+            <if test="disableDate != null">
+                ,disableDate
+            </if>
+            <if test="createUser != null">
+                ,createuser_id
+            </if>
+            <if test="disableDays != null">
+                ,disableDays
+            </if>
+            <if test="minBidAmount != null">
+                ,minBidAmount
+            </if>
+            <if test="applyTime != null">
+                ,applyTime
+            </if>
+            <if test="publishTime != null">
+                ,publishTime
+            </if>
+            <if test="returnType != null">
+                ,returnType
+            </if>
+        </trim>
+        <trim prefix="values(" suffix=")" prefixOverrides=",">
+            <if test="version != null">
+                ,#{version}
+            </if>
+            <if test="bidRequestType != null">
+                ,#{bidRequestType}
+            </if>
+            <if test="bidRequestState != null">
+                ,#{bidRequestState}
+            </if>
+            <if test="bidRequestAmount != null">
+                ,#{bidRequestAmount}
+            </if>
+            <if test="currentRate != null">
+                ,#{currentRate}
+            </if>
+            <if test="monthes2Return != null">
+                ,#{monthes2Return}
+            </if>
+            <if test="bidCount != null">
+                ,#{bidCount}
+            </if>
+            <if test="totalRewardAmount != null">
+                ,#{totalRewardAmount}
+            </if>
+            <if test="currentSum != null">
+                ,#{currentSum}
+            </if>
+            <if test="title != null and title != ''">
+                ,#{title}
+            </if>
+            <if test="description != null and description != ''">
+                ,#{description}
+            </if>
+            <if test="note != null and note != ''">
+                ,#{note}
+            </if>
+            <if test="disableDate != null">
+                ,#{disableDate}
+            </if>
+            <if test="createUser != null">
+                ,#{createUser.id}
+            </if>
+            <if test="disableDays != null">
+                ,#{disableDays}
+            </if>
+            <if test="minBidAmount != null">
+                ,#{minBidAmount}
+            </if>
+            <if test="applyTime != null">
+                ,#{applyTime}
+            </if>
+            <if test="publishTime != null">
+                ,#{publishTime}
+            </if>
+            <if test="returnType != null">
+                ,#{returnType}
+            </if>
+        </trim>
+    </insert>
+
+
+    <select id="queryForCount" resultType="int">
+        select count(id)
+        from bidrequest
+        where bidRequestState = #{id}
+    </select>
+
+
+    <select id="queryForPage" resultMap="BidRequestMap">
+        select id,
+               version,
+               bidRequestType,
+               bidRequestState,
+               bidRequestAmount,
+               currentRate,
+               monthes2Return,
+               bidCount,
+               totalRewardAmount,
+               currentSum,
+               title,
+               description,
+               note,
+               disableDate,
+               createuser_id,
+               disableDays,
+               minBidAmount,
+               applyTime,
+               publishTime,
+               returnType
+        from bidrequest
+        where bidRequestState = #{id}
+
+
+        limit #{bidRequestQueryObject.start},#{bidRequestQueryObject.pageSize}
+    </select>
+
+
+    <select id="queryById" resultMap="BidRequestMap">
+        select id,
+               version,
+               bidRequestType,
+               bidRequestState,
+               bidRequestAmount,
+               currentRate,
+               monthes2Return,
+               bidCount,
+               totalRewardAmount,
+               currentSum,
+               title,
+               description,
+               note,
+               disableDate,
+               createuser_id,
+               disableDays,
+               minBidAmount,
+               applyTime,
+               publishTime,
+               returnType
+        from bidrequest
+        where id = #{bidRequestId} ;
+    </select>
+
+
+    <update id="updateItem" parameterType="BidRequest">
+        update bidrequest
+        <set>
+            <if test="bidRequestupdate.version != null">
+                version=#{bidRequestupdate.version},
+            </if>
+            <if test="bidRequestupdate.bidRequestType != null">
+                bidRequestType=${bidRequestupdate.bidRequestType},
+            </if>
+            <if test="bidRequestupdate.bidRequestState != null">
+                bidRequestState=#{bidRequestupdate.bidRequestState},
+            </if>
+            <if test="bidRequestupdate.bidRequestAmount != null">
+                bidRequestAmount=#{bidRequestupdate.bidRequestAmount},
+            </if>
+            <if test="bidRequestupdate.currentRate != null">
+                currentRate=#{bidRequestupdate.currentRate},
+            </if>
+            <if test="bidRequestupdate.bidCount != null">
+                bidCount=bidCount+#{bidRequestupdate.bidCount},
+            </if>
+            <if test="bidRequestupdate.totalRewardAmount != null">
+                totalRewardAmount=#{bidRequestupdate.totalRewardAmount},
+            </if>
+            <if test="bidRequestupdate.currentSum != null">
+                currentSum=currentSum+#{bidRequestupdate.currentSum},
+            </if>
+            <if test="bidRequestupdate.title != null and bidRequestupdate.title != ''">
+                title=#{bidRequestupdate.title},
+            </if>
+            <if test="bidRequestupdate.note != null and bidRequestupdate.note != ''">
+                note=#{bidRequestupdate.note},
+            </if>
+            <if test="bidRequestupdate.disableDate != null">
+                disableDate=#{bidRequestupdate.disableDate},
+            </if>
+            <if test="bidRequestupdate.publishTime != null">
+                publishTime=#{bidRequestupdate.publishTime},
+            </if>
+            <if test="bidRequestupdate.returnType != null">
+                returnType=#{bidRequestupdate.returnType},
+            </if>
+
+
+        </set>
+        where id = #{id}
+    </update>
+
+
+    <select id="queryPassAuditing" resultMap="BidRequestMap">
+        select id,
+               version,
+               bidRequestType,
+               bidRequestState,
+               bidRequestAmount,
+               currentRate,
+               monthes2Return,
+               bidCount,
+               totalRewardAmount,
+               currentSum,
+               title,
+               description,
+               note,
+               disableDate,
+               createuser_id,
+               disableDays,
+               minBidAmount,
+               applyTime,
+               publishTime,
+               returnType
+        from bidrequest
+        where bidRequestState in (1,7,8)
+        order by bidRequestState ASC
+        limit 1,5
+    </select>
+
+
+    <select id="queryForCountWithState" resultType="int">
+        select count(id)
+        from bidrequest
+        <where>
+            disableDate>now()
+            <if test="bidRequestQueryObject.bidRequestState != null and bidRequestQueryObject.bidRequestState!=-1">
+                and bidRequestState=#{bidRequestQueryObject.bidRequestState}
+            </if>
+            <if test="bidRequestQueryObject.bidRequestState != null and bidRequestQueryObject.bidRequestState == -1">
+                and bidRequestState IN (1,7,8,9)
+            </if>
+        </where>
+    </select>
+
+    <select id="queryForPageWithState" resultMap="BidRequestMap">
+        select id, version, bidRequestType, bidRequestState, bidRequestAmount, currentRate, monthes2Return, bidCount,
+        totalRewardAmount, currentSum, title, description, note, disableDate, createuser_id, disableDays, minBidAmount,
+        applyTime, publishTime, returnType
+        from bidrequest
+        <where>
+            disableDate>now()
+            <if test="bidRequestQueryObject.bidRequestState != null and bidRequestQueryObject.bidRequestState!=-1">
+                and bidRequestState=#{bidRequestQueryObject.bidRequestState}
+            </if>
+            <if test="bidRequestQueryObject.bidRequestState != null and bidRequestQueryObject.bidRequestState == -1">
+                and bidRequestState IN (1,7,8,9)
+            </if>
+        </where>
+        limit #{bidRequestQueryObject.start},#{bidRequestQueryObject.pageSize}
+    </select>
+
+
+</mapper>

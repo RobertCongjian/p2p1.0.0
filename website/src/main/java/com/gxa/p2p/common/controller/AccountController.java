@@ -2,7 +2,9 @@ package com.gxa.p2p.common.controller;
 
 import com.gxa.p2p.common.domain.Account;
 import com.gxa.p2p.common.domain.LoginInfo;
+import com.gxa.p2p.common.domain.Userinfo;
 import com.gxa.p2p.common.service.IAccountService;
+import com.gxa.p2p.common.service.IUserInfoService;
 import com.gxa.p2p.common.util.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,6 +30,9 @@ public class AccountController {
 	@Autowired
 	private IAccountService iAccountService;
 
+	@Autowired
+	private IUserInfoService iUserInfoService;
+
 
 	@RequestMapping("personal")
 	public String personalCenter(Model model,HttpSession session) {
@@ -50,6 +55,8 @@ public class AccountController {
 			count = count.add(new BigDecimal(s));
 		}
 		model.addAttribute("count", count);
+		Userinfo userinfo = iUserInfoService.getUserInfoById(UserContext.getLoginInfo().getId());
+		model.addAttribute("userinfo", userinfo);
 
 		return "personal";
 	}

@@ -27,17 +27,17 @@
 
 <script type="text/javascript">
 	$(function(){
-		$("#loginForm").ajaxForm({
-			success:function(data){
-				if(data.success){
-					$.messager.confirm("提示","登陆成功,点击确定进入个人中心",function(){
-						window.location.href="./personal.do";
-					});
-				}else{
-					$.messager.popup(data.msg)
+			$("#loginForm").ajaxForm({
+				success:function(data){
+					if(data.success){
+						$.messager.confirm("提示","登陆成功,点击确定进入个人中心",function(){
+							window.location.href="./personal.do";
+						});
+					}else{
+						$.messager.popup(data.msg)
+					}
 				}
-			}
-		});
+			});
 		$("#loginForm").validate({
 			rules:{
 				username:"required",

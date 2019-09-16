@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,7 +10,134 @@
 
 		<script type="text/javascript">
 
+			$(function () {
+				//点击马上绑定
+				$("#showBindPhoneModal").click(function () {
+					$("#bindPhoneModal").modal("show");
+				});
+
+				//给发送验证码按钮添加事件
+				$("#sendVerifyCode").click(function () {
+					var phoneNumber = $("#phoneNumber").val(); //获取到手机号后发送ajax请求
+					var _this = $(this);
+					_this.attr("disabled", true); //点击之后立刻禁用按钮
+					if (phoneNumber) {
+						$.ajax({
+							type: "POST",
+							url: "./sendVerifyCode.do",
+							dataType: "json",
+							data: { //发送到服务器的数据
+								phoneNumber: phoneNumber
+							},
+							success: function (data) {
+								if (data.success) { //做倒计时
+									var count = 60;
+									var timer = window.setInterval(function () {
+										count--;
+										if (count <= 0) {
+											window.clearInterval(timer);
+											_this.text("重新发送验证码");
+											_this.attr("disabled", false);
+										} else {
+											_this.text(count + "秒后重新发送");
+										}
+									}, 1000);
+								} else {
+									$.messager.popup(data.msg);
+									_this.attr("disabled", false);
+								}
+							}
+						})
+					}
+				});
+
+				// 给绑定手机确认按钮添加点击事件
+				$("#bindPhone").click(function () {
+					//提交整个表单
+					$("#bindPhoneForm").ajaxSubmit({
+						success: function (data) {
+							if (data.success) {
+								alert("绑定成功！");
+								window.location.reload(); //刷新当前页面  关闭模式窗
+							} else {
+								$.messager.confirm("提示", data.msg);
+							}
+						}
+					});
+
+
+				});
+
+				//邮箱的马上绑定按钮
+				$("#showBindEmailModal").click(function () {
+					$("#bindEmailModal").modal("show");
+				});
+
+				//设置提示文字为红色，并隐藏
+				$("#checkEmailReg").hide();
+				$("#checkEmailReg").css("color", "red");
+				//默认设置点击按钮不可用，等待合法的邮箱地址
+				$("#bindEmail").enable(false);
+
+				//监听文本框内容改变，即时给出提示
+				$('#email').on('input propertychange', function () {
+
+					//显示判断内容
+					$("#checkEmailReg").css("color", "red");
+					$("#checkEmailReg").show();
+					// 获取文本框的内容
+					var emailTxt = $('#email').val();
+					// 邮箱的验证正则：
+					var reg = /^\w+@(\w+\.)+\w+$/
+
+					//内容为空时隐藏
+					if (emailTxt == '') {
+						$("#checkEmailReg").hide();
+					}
+
+					if (reg.test(emailTxt)) {
+						$("#checkEmailReg").css("color", "green");
+						$("#checkEmailReg").text("邮箱格式正确");
+						$("#bindEmail").enable(true)
+					} else {
+						$("#checkEmailReg").css("color", "red");
+						$("#checkEmailReg").text("邮箱格式不符合要求");
+						$("#bindEmail").enable(false)
+					}
+
+				});
+
+				//给邮箱的保存按钮添加点击事件发送ajax请求
+				$("#bindEmail").click(function () {
+					var email = $('#email').val();
+					$.ajax({
+						type: "POST",
+						url: "./sendEmail.do",
+						dataType: "json",
+						data: { //发送到服务器的数据
+							email: email
+						},
+						success: function (data) {
+							if (data.success) {
+								window.location.reload(); //刷新当前页面  关闭模式窗
+							} else {
+								$.messager.popup(data.msg);
+							}
+						}
+					})
+
+				});
+			})
+
+
+
+
+
+
+
+
 		</script>
+
 	</head>
 	<body>
 		<!-- 网页顶部导航 -->
@@ -81,7 +208,7 @@
 												<h5>实名认证</h5>
 												未认证
 												<a href="./realAuth.do" id="">立刻绑定</a>
-<#--												<#if userinfo.isRealAuth >
+												<#--<#if userinfo.isRealAuth >
 												<p>
 													已认证
 													<a href="#">查看</a>
@@ -104,9 +231,7 @@
 											</div>
 											<div class="el-accoun-auth-right">
 												<h5>手机认证</h5>
-												未认证
-												<a href="javascript:;" id="showBindPhoneModal">立刻绑定</a>
-<#--												<#if userinfo.isBindPhone >
+												<#if userinfo.isBindPhone >
 												<p>
 													已认证
 													<a href="#">查看</a>
@@ -116,7 +241,7 @@
 													未认证
 													<a href="javascript:;" id="showBindPhoneModal">立刻绑定</a>
 												</p>
-												</#if>-->
+												</#if>
 											</div>
 											<div class="clearfix"></div>
 											<p class="info">可以收到系统操作信息,并增加使用安全性</p>
@@ -129,9 +254,7 @@
 											</div>
 											<div class="el-accoun-auth-right">
 												<h5>邮箱认证</h5>
-												未绑定
-												<a href="javascript:;" id="showBindEmailModal">去绑定</a>
-<#--												<#if userinfo.isBindEmail>
+												<#if userinfo.isBindEmail>
 												<p>
 													已绑定
 													<a href="#">查看</a>
@@ -141,7 +264,7 @@
 													未绑定
 													<a href="javascript:;" id="showBindEmailModal">去绑定</a>
 												</p>
-												</#if>-->
+												</#if>
 											</div>
 											<div class="clearfix"></div>
 											<p class="info">您可以设置邮箱来接收重要信息</p>
@@ -173,7 +296,7 @@
 			</div>
 		</div>
 
-<#--		<#if !userinfo.isBindPhone>-->
+    	<#if !userinfo.isBindPhone>
 		<div class="modal fade" id="bindPhoneModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
@@ -182,7 +305,7 @@
 			<h4 class="modal-title" id="exampleModalLabel">绑定手机</h4>
 		      </div>
 		      <div class="modal-body">
-				<form class="form-horizontal" id="bindPhoneForm" method="post" action="/bindPhone.do">
+				<form class="form-horizontal" id="bindPhoneForm" method="post" action="${ctx}/bindPhone.do">
 					<div class="form-group">
 						    <label for="phoneNumber" class="col-sm-2 control-label">手机号:</label>
 						    <div class="col-sm-4">
@@ -205,10 +328,10 @@
 		    </div>
 		  </div>
 		</div>
-<#--		</#if>-->
+		</#if>
 
 
-<#--		<#if !userinfo.isBindEmail>-->
+		<#if !userinfo.isBindEmail>
 		<div class="modal fade" id="bindEmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
@@ -233,7 +356,7 @@
 		    </div>
 		  </div>
 		</div>
-<#--		</#if>-->
+		</#if>
 
 
 <#--		<#include "common/footer-tpl.ftl" />-->

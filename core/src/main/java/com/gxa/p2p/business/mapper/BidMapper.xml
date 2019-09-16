@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gxa.p2p.business.mapper.BidMapper">
+    <resultMap id="BidBaseMap" type="com.gxa.p2p.business.domain.Bid">
+        <id property="id" column="id"/>
+        <result property="bidUserId" column="biduser_id"/>
+        <result property="actualRate" column="actualRate"/>
+        <result property="availableAmount" column="availableAmount"/>
+        <result property="bidTime" column="bidTime"/>
+        <result property="bidRequestId" column="bidRequestId"/>
+        <association property="bidUser" column="biduser_id" javaType="LoginInfo"
+                     select="com.gxa.p2p.common.mapper.LoginInfoMapper.selectByPrimaryKey"/>
+
+    </resultMap>
+
+    <insert id="insertBid" parameterType="Bid">
+        insert into bid (biduser_id, actualRate, availableAmount, bidTime, bidRequestId)
+        values (#{bidUserId}, #{actualRate}, #{availableAmount}, #{bidTime}, #{bidRequestId});
+    </insert>
+    <select id="getBidsById" resultMap="BidBaseMap">
+        select id, biduser_id, actualRate, availableAmount, bidTime, bidRequestId
+        from bid
+        where bidRequestId = #{id};
+
+    </select>
+
+</mapper>  

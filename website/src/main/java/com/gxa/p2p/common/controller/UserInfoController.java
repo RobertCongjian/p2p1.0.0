@@ -113,6 +113,8 @@ public class UserInfoController {
     @ResponseBody
     public JSONResult userInfoSave(Userinfo userinfo,HttpSession session) {
         LoginInfo loginInfo = (LoginInfo) session.getAttribute("logininfo");
+        Userinfo userinfo1 = iUserInfoService.getUserInfoById(loginInfo.getId());
+        userinfo.setBitstate(userinfo1.getBitstate());
         JSONResult json = new JSONResult();
         try {
             iUserInfoService.updateItem(userinfo,loginInfo.getId());
