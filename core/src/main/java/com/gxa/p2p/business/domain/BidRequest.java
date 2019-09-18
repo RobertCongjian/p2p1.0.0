@@ -21,7 +21,7 @@ public class BidRequest {
     private Integer id;
 
     // 借款标的基本信息
-    private Integer version;// 版本号
+    private Integer version=0;// 版本号
     private Integer bidRequestType;// 借款类型(信用标)
     private Integer bidRequestState;// 借款状态
     private BigDecimal bidRequestAmount;// 借款总金额
