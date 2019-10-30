@@ -43,7 +43,7 @@ public class BidRequestListController {
     public String bidRequestAudit1List(Model model,BidRequestQueryObject bidRequestQueryObject){
 
         model.addAttribute("pageResult", bidRequestService.queryForPage(bidRequestQueryObject, SysConstant.BIDREQUEST_STATE_APPROVE_PENDING_1));
-        return "bidrequest/publish_audit";
+        return "bidrequest/publish_audit1";
 
     }
 
@@ -51,7 +51,7 @@ public class BidRequestListController {
     public String bidRequestAudit2List(Model model,BidRequestQueryObject bidRequestQueryObject){
 
         model.addAttribute("pageResult", bidRequestService.queryForPage(bidRequestQueryObject, SysConstant.BIDREQUEST_STATE_APPROVE_PENDING_2));
-        return "bidrequest/publish_audit";
+        return "bidrequest/publish_audit2";
 
     }
 
