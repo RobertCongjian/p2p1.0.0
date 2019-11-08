@@ -4,6 +4,7 @@ import com.gxa.p2p.business.domain.Bid;
 import com.gxa.p2p.business.domain.BidRequest;
 import com.gxa.p2p.business.mapper.BidMapper;
 import com.gxa.p2p.business.mapper.BidRequestMapper;
+import com.gxa.p2p.common.mapper.AccountMapper;
 import com.gxa.p2p.common.service.BidService;
 import com.gxa.p2p.common.util.SysConstant;
 import com.gxa.p2p.common.util.UserContext;
@@ -22,6 +23,9 @@ public class BidServiceImpl implements BidService {
 
     @Autowired
     private BidRequestMapper bidRequestMapper;
+
+    @Autowired
+    private AccountMapper accountMapper;
 
 
     @Override
@@ -52,6 +56,8 @@ public class BidServiceImpl implements BidService {
                 bidRequestMapper.updateItem(changeState,bidRequestId);
             }
         }
+
+        accountMapper.updateByUserId(userId,amount);
 
         return row1+row2;
     }

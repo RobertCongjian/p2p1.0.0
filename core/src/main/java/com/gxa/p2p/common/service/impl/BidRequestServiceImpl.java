@@ -62,6 +62,7 @@ public class BidRequestServiceImpl implements BidRequestService {
     @Override
     public PageResultSet queryForPage(BidRequestQueryObject bidRequestQueryObject,int id) {
         int count = bidRequestMapper.queryForCount(id);
+        System.err.println("===================================>"+count);
 
         PageResultSet pageResultSet;
         //如果存在符合条件的数据，对数据进行分页查询，获取当前页的数据;没有则返回空的数据集
@@ -72,11 +73,27 @@ public class BidRequestServiceImpl implements BidRequestService {
                 System.err.println(bidRequest.toString());
                 System.out.println();
             }
-            pageResultSet = new PageResultSet(
-                    list,
-                    count,
-                    bidRequestQueryObject.getCurrentPage(),
-                    bidRequestQueryObject.getPageSize());
+
+            if(list.size()==0){
+
+                bidRequestQueryObject.setCurrentPage(bidRequestQueryObject.getCurrentPage()-1);
+                list = bidRequestMapper.queryForPage(bidRequestQueryObject,id);
+                pageResultSet = new PageResultSet(
+                        list,
+                        count,
+                        bidRequestQueryObject.getCurrentPage(),
+                        bidRequestQueryObject.getPageSize()
+                );
+            }else {
+                pageResultSet = new PageResultSet(
+                        list,
+                        count,
+                        bidRequestQueryObject.getCurrentPage(),
+                        bidRequestQueryObject.getPageSize());
+            }
+
+
+
         } else {
             pageResultSet = PageResultSet.empty(bidRequestQueryObject.getPageSize());
         }
