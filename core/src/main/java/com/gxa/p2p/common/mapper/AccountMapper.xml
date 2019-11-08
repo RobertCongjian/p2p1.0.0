@@ -27,4 +27,16 @@
         from account where id=#{id}
     </select>
 
+    <update id="updateByUserId">
+        update account
+        <set>
+            <if test="amount != null">
+                usableAmount = usableAmount-#{amount},
+            </if>
+        </set>
+        where id = #{userId}
+
+    </update>
+
+
 </mapper>
