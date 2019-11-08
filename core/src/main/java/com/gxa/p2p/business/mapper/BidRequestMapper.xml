@@ -288,7 +288,7 @@
                publishTime,
                returnType
         from bidrequest
-        where disableDate>now() and bidRequestState in (1,7,8)
+        where disableDate>now() and bidRequestState in (1,7,8,9)
         order by bidRequestState ASC
         limit 1,5
     </select>
