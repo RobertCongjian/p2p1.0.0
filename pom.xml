@@ -21,7 +21,7 @@
         <junit.version>4.12</junit.version>
         <org.projectlombok.version>1.16.6</org.projectlombok.version>
         <org.mybatis.version>3.2.3</org.mybatis.version>
-        <org.springframework.version>4.0.0.RELEASE</org.springframework.version>
+        <org.springframework.version>5.2.20.RELEASE</org.springframework.version>
     </properties>
 
     <dependencies>
